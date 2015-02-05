@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Maxflow">
+      <UniqueIdentifier>{4d389e7c-7d09-460a-9d2a-9a34e0875683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GMM">
+      <UniqueIdentifier>{5874b651-6536-4cb9-9554-043e93d387c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GrabCut">
+      <UniqueIdentifier>{27ac57b4-9e8f-4e00-9a1b-5c5419cc3ff3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\maxflow\README.TXT">
+      <Filter>Maxflow</Filter>
+    </Text>
+    <Text Include="..\maxflow\CHANGES.TXT">
+      <Filter>Maxflow</Filter>
+    </Text>
+    <Text Include="..\maxflow\GPL.TXT">
+      <Filter>Maxflow</Filter>
+    </Text>
+    <Text Include="ReadMe.txt">
+      <Filter>Maxflow</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\maxflow\block.h">
+      <Filter>Maxflow</Filter>
+    </ClInclude>
+    <ClInclude Include="..\maxflow\graph.h">
+      <Filter>Maxflow</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\GMM\GMM.hpp">
+      <Filter>GMM</Filter>
+    </ClInclude>
+    <ClInclude Include="_GrabCut.h">
+      <Filter>GrabCut</Filter>
+    </ClInclude>
+    <ClInclude Include="GrabCutApp.h">
+      <Filter>GrabCut</Filter>
+    </ClInclude>
+    <ClInclude Include="GrabCut\MultiResolutionCut.h">
+      <Filter>GrabCut</Filter>
+    </ClInclude>
+    <ClInclude Include="GrabCut\_GraphCutUI.h">
+      <Filter>GrabCut</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\maxflow\maxflow.cpp">
+      <Filter>Maxflow</Filter>
+    </ClCompile>
+    <ClCompile Include="..\maxflow\graph.cpp">
+      <Filter>Maxflow</Filter>
+    </ClCompile>
+    <ClCompile Include="..\GMM\GMM.cpp">
+      <Filter>GMM</Filter>
+    </ClCompile>
+    <ClCompile Include="_GrabCut.cpp">
+      <Filter>GrabCut</Filter>
+    </ClCompile>
+    <ClCompile Include="GrabCutApp.cpp">
+      <Filter>GrabCut</Filter>
+    </ClCompile>
+    <ClCompile Include="GrabCut\MultiResolutionCut.cpp">
+      <Filter>GrabCut</Filter>
+    </ClCompile>
+    <ClCompile Include="GrabCut\_GraphCutUI.cpp">
+      <Filter>GrabCut</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\maxflow\instances.inc">
+      <Filter>Maxflow</Filter>
+    </None>
+  </ItemGroup>
+</Project>
