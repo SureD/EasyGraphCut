@@ -1,6 +1,6 @@
+#include "../stdafx.h"
 #include <iostream>
 #include "GrabCut/_GrabCut.h"
-#include "opencv2/opencv.hpp"
 using namespace std;
 using namespace cv;
 const Scalar RED = Scalar(0,0,255);

@@ -1,11 +1,12 @@
 #pragma once
-
+#include "../stdafx.h"
 #include <iostream>
 #include "graph.h"
 #include "GMM.hpp"
 #include "string"
 #include "_GraphCutUI.h"
-#include <opencv2/opencv.hpp>
+#include "../GrabCut/_GrabCut.h"
+#include "CloseFormSolutionMatting.h"
 using namespace std;
 
 // UI callback function
@@ -15,45 +16,44 @@ class MultiResolutionCut
 {
 public:
 	// construction and destruction function
-	MultiResolutionCut(Mat& img,Mat& mask);  // need init lists
+	MultiResolutionCut( Mat& img, Mat& mask,const Mat* pOriginalImage, Rect& rect,
+						Size curSize, Size originalSize,const Mat& originalMask);  
 	~MultiResolutionCut(void);
-
-	static void Demo(const string file,_GraphCutUI& _CutUI,int mode=0);
+	//static _GrabCut _grabCutObj;
+	static void		Demo(const string file,_GraphCutUI& _CutUI,int mode=0);
+private:
+	static const int _sizeNums = 25; // the total count of the resize array
+	static const int _base = 2; // base of resize function
 
 public:
-	void initialize();
-	void buildGMMs();
-	void cut();
-	void getTriMap(Mat &map){map = _triMap;};
+	void		Initialize();
+
+	void		Cut();
+	void		GetTriMap(Mat &map){map = m_triMap;};
+	void		ShowImgAndResults() const ;
+	void		ShowImgByMask(const Mat& img,Mat mask) ;
+// the closed formed method
+	void		ExecuteClosedFormed(Mat& originalMask);
 private:
-	// permanent parameters
-	double calcBeta();
-	void calcNWeights();
 
-	//GMM
-	void initGMMs();   //initialization
+//GMM
+	void		InitGMMs();   //initialization
+	void		BuildGMMs();
 
-	// used for iteration
-	void assignGMMsComponents();
-	void learnGMMs();
-	void constructGCGraph();
-	// estimate results
-	void estimateSegmentation();
 
 private:
-	int _w, _h, _iterCount;
-	GMM *_pbGMM, *_pfGMM;
-	Mat _bgdModel,_fgdModel;
-	Mat _triMap, _binaryMask;
-	Mat _img4Show;
-	const Mat _imgMat;
 
-	double _gamma;  //50 for grabCut
-	double _lambda; // 9*gamma
-	double _beta;
-	GraphD *_pGraph;
-	Mat _leftW, _upleftW, _upW, _uprightW;    //Weight matrix
-	Mat _compIdxs;	
+
+	int			m_w, m_h, m_iterCount;
+	GMM			*m_pbGMM, *m_pfGMM;
+	Mat			m_bgdModel,m_fgdModel;
+	Mat			m_triMap, m_binaryMask,m_originalMask;
+	Mat			m_img4Show;
+	Rect		m_rect;
+	const Mat	m_imgMat;
+	const Size	m_curSize;  //  size of the resized matrix
+	const Size	m_originalSize;
+	const Mat*  m_pOriginalImage;
 
 
 

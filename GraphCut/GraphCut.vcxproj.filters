@@ -65,6 +65,9 @@
     <ClInclude Include="GrabCut\_GraphCutUI.h">
       <Filter>GrabCut</Filter>
     </ClInclude>
+    <ClInclude Include="GrabCut\CloseFormSolutionMatting.h">
+      <Filter>GrabCut</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -92,6 +95,9 @@
       <Filter>GrabCut</Filter>
     </ClCompile>
     <ClCompile Include="GrabCut\_GraphCutUI.cpp">
+      <Filter>GrabCut</Filter>
+    </ClCompile>
+    <ClCompile Include="GrabCut\CloseFormSolutionMatting.cpp">
       <Filter>GrabCut</Filter>
     </ClCompile>
   </ItemGroup>

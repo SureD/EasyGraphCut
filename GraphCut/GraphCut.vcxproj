@@ -101,11 +101,15 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -152,6 +156,7 @@
     <ClInclude Include="..\maxflow\block.h" />
     <ClInclude Include="..\maxflow\graph.h" />
     <ClInclude Include="GrabCutApp.h" />
+    <ClInclude Include="GrabCut\CloseFormSolutionMatting.h" />
     <ClInclude Include="GrabCut\MultiResolutionCut.h" />
     <ClInclude Include="GrabCut\_GraphCutUI.h" />
     <ClInclude Include="_GrabCut.h" />
@@ -163,6 +168,7 @@
     <ClCompile Include="..\maxflow\graph.cpp" />
     <ClCompile Include="..\maxflow\maxflow.cpp" />
     <ClCompile Include="GrabCutApp.cpp" />
+    <ClCompile Include="GrabCut\CloseFormSolutionMatting.cpp" />
     <ClCompile Include="GrabCut\MultiResolutionCut.cpp" />
     <ClCompile Include="GrabCut\_GraphCutUI.cpp" />
     <ClCompile Include="Main.cpp" />

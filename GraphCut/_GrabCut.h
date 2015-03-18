@@ -1,27 +1,26 @@
 #pragma once
-#include <opencv2/opencv.hpp>
+#include "stdafx.h"
 #include "graph.h"
 #include "GMM.hpp"
-//! class of the pixel in GrabCut algorithm
+//! class of the pixel in GrabCut algorithm  
+// the OpenCV version
 class _GrabCut
 {
 public:
-	_GrabCut(void);
-	~_GrabCut(void);
-	void grab_Cut( Mat _img, Mat& _mask, Rect& rect,
+	static void grab_Cut( Mat _img, Mat& _mask, Rect& rect,
 		Mat &_bgdModel, Mat& _fgdModel,
-		int iterCount, int mode  );
+		int iterCount, int mode=GC_INIT_WITH_MASK );
 private:
-	double calcBeta( const Mat& img );
-	void calcNWeights( const Mat& img, Mat& leftW, Mat& upleftW, Mat& upW, Mat& uprightW, double beta, double gamma );
-	void checkMask( const Mat& img, const Mat& mask );
-	void initMaskWithRect( Mat& mask, Size imgSize, Rect rect );
-	void initGMMs( const Mat& img, const Mat& mask, GMM& bgdGMM, GMM& fgdGMM );
-	void assignGMMsComponents( const Mat& img, const Mat& mask, const GMM& bgdGMM, const GMM& fgdGMM, Mat& compIdxs );
-	void learnGMMs( const Mat& img, const Mat& mask, const Mat& compIdxs, GMM& bgdGMM, GMM& fgdGMM );
-	void constructGCGraph( const Mat& img, const Mat& mask, const GMM& bgdGMM, const GMM& fgdGMM, double lambda,
+	static double calcBeta( const Mat& img );
+	static void calcNWeights( const Mat& img, Mat& leftW, Mat& upleftW, Mat& upW, Mat& uprightW, double beta, double gamma );
+	static void checkMask( const Mat& img, const Mat& mask );
+	static void initMaskWithRect( Mat& mask, Size imgSize, Rect rect );
+	static void initGMMs( const Mat& img, const Mat& mask, GMM& bgdGMM, GMM& fgdGMM );
+	static void assignGMMsComponents( const Mat& img, const Mat& mask, const GMM& bgdGMM, const GMM& fgdGMM, Mat& compIdxs );
+	static void learnGMMs( const Mat& img, const Mat& mask, const Mat& compIdxs, GMM& bgdGMM, GMM& fgdGMM );
+	static void constructGCGraph( const Mat& img, const Mat& mask, const GMM& bgdGMM, const GMM& fgdGMM, double lambda,
 		const Mat& leftW, const Mat& upleftW, const Mat& upW, const Mat& uprightW, GraphD& graph);
-	void estimateSegmentation(GraphD& graph,Mat& mask );
+	static void estimateSegmentation(GraphD& graph,Mat& mask );
 
 
 

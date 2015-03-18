@@ -15,128 +15,82 @@ void MultiResolutionCut:: Demo(const string imgName,_GraphCutUI& _CutUI,int mode
 
 	// get the mask
 	_CutUI.getMask(mask);
+	//FileStorage fs("mask.txt",FileStorage::WRITE);
+	//fs<<"mask"<<mask;
+	Mat mirrorMask(mask.size(),CV_8UC1,Scalar::all(0)); 
+	// rect
+	Rect rect;
+	_CutUI.getRect(rect);
+	//s_original_size1 = img.size();
+
+	for (int i=0;i<_sizeNums;i++)
+	{
+		Mat t_resizeImg,t_resizeMask;
+		Size t_size;
+		Rect t_rect;
+		// initialize the parameter
+		t_size.height = cvRound(img.rows/(pow(_base,i/5)));
+		t_size.width = cvRound(img.cols/(pow(_base,i%5)));
+
+		t_rect.x = cvRound(rect.x/(pow(_base,i%5)));
+		t_rect.y = cvRound(rect.y/(pow(_base,i/5)));
+		t_rect.width = cvRound(rect.width/(pow(_base,i%5)));
+		t_rect.height = cvRound(rect.height/(pow(_base,i/5)));
 
 
-	MultiResolutionCut test(img,mask);
-	test.cut();
-	test.getTriMap(mask);
-	_CutUI.reSetMask(mask);
-	_CutUI.showImage();
-	waitKey(0);
+		t_size.height = max(t_size.height,20); t_size.width = max(t_size.width,20);
+		resize(img,t_resizeImg,t_size);
+		//resize(mask,t_resizeMask,t_size);
+		t_resizeMask.create(t_size,CV_8UC1);
+		t_resizeMask.setTo(0);
+		(t_resizeMask(t_rect)).setTo( Scalar(TM_PR_FGD) );
+
+
+		MultiResolutionCut test(t_resizeImg,t_resizeMask,&img,rect,t_size,img.size(),mask);
+		test.ShowImgByMask(t_resizeImg,t_resizeMask);
+		waitKey(0);
+		test.Cut();
+		test.ExecuteClosedFormed(mirrorMask);
+		cout<<mirrorMask.size()<<endl;
+		cout<<img.size()<<endl;
+		test.ShowImgByMask(img,mirrorMask);
+		//test.ShowImgAndResults();
+		waitKey(0);
+		
+	}
+
 
 
 	
 
 }
-MultiResolutionCut::MultiResolutionCut(Mat& img,Mat& mask)
-	:_triMap(mask),_imgMat(img),_iterCount(3),_w(img.cols),_h(img.rows),_gamma(50)
+MultiResolutionCut::MultiResolutionCut(Mat& img,Mat& mask,const Mat* pOriginalImage,Rect&rect,Size curSize, Size originalSize,const Mat& originalMask):
+	m_triMap(mask), m_imgMat(img), m_iterCount(3),
+	m_w(img.cols), m_h(img.rows),
+	m_curSize(curSize), m_originalMask(originalMask), 
+	m_originalSize(originalSize),m_pOriginalImage(pOriginalImage)
 {
-	_lambda = _gamma*9;
 }
 MultiResolutionCut::~MultiResolutionCut()
 {
-	if(_pGraph)
-		delete _pGraph;
-	if(_pfGMM)
-		delete _pfGMM;
-	if (_pbGMM)
-		delete _pbGMM;
+	if(m_pfGMM)
+		delete m_pfGMM;
+	if (m_pbGMM)
+		delete m_pbGMM;
+	m_pOriginalImage = NULL;
 }
-void MultiResolutionCut::initialize()
+void MultiResolutionCut::Initialize()
 {
-	_beta = calcBeta();
-	calcNWeights();
-}
-void MultiResolutionCut::buildGMMs()
-{
-	_pbGMM = new GMM(_bgdModel);
-	_pfGMM = new GMM(_fgdModel);
-	_compIdxs.create(_imgMat.size(), CV_32SC1);
-	// may be need check mask
 
-	initGMMs();
 }
-double MultiResolutionCut::calcBeta()
+void MultiResolutionCut::BuildGMMs()
 {
-	double beta = 0;
-	for( int y = 0; y < _imgMat.rows; y++ )
-	{
-		for( int x = 0; x < _imgMat.cols; x++ )
-		{
-			Vec3d color = _imgMat.at<Vec3b>(y,x);
-			if( x>0 ) // left
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y,x-1);
-				beta += diff.dot(diff);
-			}
-			if( y>0 && x>0 ) // upleft
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y-1,x-1);
-				beta += diff.dot(diff);
-			}
-			if( y>0 ) // up
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y-1,x);
-				beta += diff.dot(diff);
-			}
-			if( y>0 && x<_imgMat.cols-1) // upright
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y-1,x+1);
-				beta += diff.dot(diff);
-			}
-		}
-	}
-	if( beta <= std::numeric_limits<double>::epsilon() )
-		beta = 0;
-	else
-		beta = 1.f / (2 * beta/(4*_imgMat.cols*_imgMat.rows - 3*_imgMat.cols - 3*_imgMat.rows + 2) );
+	m_pbGMM = new GMM(m_bgdModel);
+	m_pfGMM = new GMM(m_fgdModel);
+	InitGMMs();
+}
 
-	return beta;
-}
-void MultiResolutionCut::calcNWeights()
-{
-	const double gammaDivSqrt2 = _gamma / std::sqrt(2.0f);
-	_leftW.create( _imgMat.rows, _imgMat.cols, CV_64FC1 );
-	_upleftW.create( _imgMat.rows, _imgMat.cols, CV_64FC1 );
-	_upW.create( _imgMat.rows, _imgMat.cols, CV_64FC1 );
-	_uprightW.create( _imgMat.rows, _imgMat.cols, CV_64FC1 );
-	for( int y = 0; y < _imgMat.rows; y++ )
-	{
-		for( int x = 0; x < _imgMat.cols; x++ )
-		{
-			Vec3d color = _imgMat.at<Vec3b>(y,x);
-			if( x-1>=0 ) // left
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y,x-1);
-				_leftW.at<double>(y,x) = _gamma * exp(-_beta*diff.dot(diff));
-			}
-			else
-				_leftW.at<double>(y,x) = 0;
-			if( x-1>=0 && y-1>=0 ) // upleft
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y-1,x-1);
-				_upleftW.at<double>(y,x) = gammaDivSqrt2 * exp(-_beta*diff.dot(diff));
-			}
-			else
-				_upleftW.at<double>(y,x) = 0;
-			if( y-1>=0 ) // up
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y-1,x);
-				_upW.at<double>(y,x) = _gamma * exp(-_beta*diff.dot(diff));
-			}
-			else
-				_upW.at<double>(y,x) = 0;
-			if( x+1<_imgMat.cols && y-1>=0 ) // upright
-			{
-				Vec3d diff = color - (Vec3d)_imgMat.at<Vec3b>(y-1,x+1);
-				_uprightW.at<double>(y,x) = gammaDivSqrt2 * exp(-_beta*diff.dot(diff));
-			}
-			else
-				_uprightW.at<double>(y,x) = 0;
-		}
-	}
-}
-void MultiResolutionCut::initGMMs()
+void MultiResolutionCut::InitGMMs()
 {
 	const int kMeansItCount = 10;
 	const int kMeansType = KMEANS_PP_CENTERS;
@@ -144,14 +98,14 @@ void MultiResolutionCut::initGMMs()
 	Mat bgdLabels, fgdLabels;
 	vector<Vec3f> bgdSamples, fgdSamples;
 	Point p;
-	for( p.y = 0; p.y < _imgMat.rows; p.y++ )
+	for( p.y = 0; p.y < m_imgMat.rows; p.y++ )
 	{
-		for( p.x = 0; p.x < _imgMat.cols; p.x++ )
+		for( p.x = 0; p.x < m_imgMat.cols; p.x++ )
 		{
-			if( _triMap.at<uchar>(p) == GC_BGD || _triMap.at<uchar>(p) == GC_PR_BGD )
-				bgdSamples.push_back( (Vec3f)_imgMat.at<Vec3b>(p) );
+			if( m_triMap.at<uchar>(p) == GC_BGD || m_triMap.at<uchar>(p) == GC_PR_BGD )
+				bgdSamples.push_back( (Vec3f)m_imgMat.at<Vec3b>(p) );
 			else // GC_FGD | GC_PR_FGD
-				fgdSamples.push_back( (Vec3f)_imgMat.at<Vec3b>(p) );
+				fgdSamples.push_back( (Vec3f)m_imgMat.at<Vec3b>(p) );
 		}
 	}
 	CV_Assert( !bgdSamples.empty() && !fgdSamples.empty() );
@@ -162,156 +116,55 @@ void MultiResolutionCut::initGMMs()
 	kmeans( t_fgdSamples, GMM::componentsCount, fgdLabels,
 		TermCriteria( CV_TERMCRIT_ITER, kMeansItCount, 0.0), 0, kMeansType );
 
-	_pbGMM->initLearning();
+	m_pbGMM->initLearning();
 	for( int i = 0; i < (int)bgdSamples.size(); i++ )
-		_pbGMM->addSample( bgdLabels.at<int>(i,0), bgdSamples[i] );
-	_pbGMM->endLearning();
+		m_pbGMM->addSample( bgdLabels.at<int>(i,0), bgdSamples[i] );
+	m_pbGMM->endLearning();
 
-	_pfGMM->initLearning();
+	m_pfGMM->initLearning();
 	for( int i = 0; i < (int)fgdSamples.size(); i++ )
-		_pfGMM->addSample( fgdLabels.at<int>(i,0), fgdSamples[i] );
-	_pfGMM->endLearning();
+		m_pfGMM->addSample( fgdLabels.at<int>(i,0), fgdSamples[i] );
+	m_pfGMM->endLearning();
 }
 
-/*
-  Assign GMMs components for each pixel.
-*/
-void MultiResolutionCut::assignGMMsComponents()
+
+void MultiResolutionCut::Cut()
 {
-	Point p;
-	for( p.y = 0; p.y < _imgMat.rows; p.y++ )
-	{
-		for( p.x = 0; p.x < _imgMat.cols; p.x++ )
-		{
-			Vec3d color = _imgMat.at<Vec3b>(p);
-			_compIdxs.at<int>(p) = _triMap.at<uchar>(p) == TM_BGD || _triMap.at<uchar>(p) == TM_PR_BGD ?
-				_pbGMM->whichComponent(color) : _pfGMM->whichComponent(color);
-		}
-	}
+	Initialize();
+	BuildGMMs();
+	//_GrabCut::grab_Cut(_imgMat,_triMap,_rect,_bgdModel,_fgdModel,1,1);
+	cv::grabCut(m_imgMat,m_triMap,m_rect,m_bgdModel,m_fgdModel,1,1);
 }
 
-/*
-  Learn GMMs parameters.
-*/
-void MultiResolutionCut::learnGMMs()
+void MultiResolutionCut::ShowImgAndResults() const
 {
-	_pbGMM->initLearning();
-	_pfGMM->initLearning();
-	Point p;
-	for( int ci = 0; ci < GMM::componentsCount; ci++ )
+	Mat binMask,res;
+	if (!m_triMap.empty())
 	{
-		for( p.y = 0; p.y < _imgMat.rows; p.y++ )
-		{
-			for( p.x = 0; p.x < _imgMat.cols; p.x++ )
-			{
-				if( _compIdxs.at<int>(p) == ci )
-				{
-					if( _triMap.at<uchar>(p) == TM_BGD || _triMap.at<uchar>(p) == TM_PR_BGD )
-						_pbGMM->addSample( ci, _imgMat.at<Vec3b>(p) );
-					else
-						_pfGMM->addSample( ci, _imgMat.at<Vec3b>(p) );
-				}
-			}
-		}
+		_GraphCutUI::getBinaryMask(m_triMap,binMask);
+		m_imgMat.copyTo(res,binMask);
 	}
-	_pbGMM->endLearning();
-	_pfGMM->endLearning();
+	
+	char windowname[25];
+	sprintf_s(windowname,"%s%d","image");
+	imshow(windowname,res);
+	// Set window and image
 }
-void MultiResolutionCut::constructGCGraph()
+void MultiResolutionCut::ExecuteClosedFormed(Mat& originalMask)
 {
-	int vtxCount = _imgMat.cols*_imgMat.rows,
-		edgeCount = 2*(4*_imgMat.cols*_imgMat.rows - 3*(_imgMat.cols + _imgMat.rows) + 2);
-	_pGraph = new GraphD(vtxCount,edgeCount);
-	Point p;
-	int vtxIdx = -1;
-	for( p.y = 0; p.y < _imgMat.rows; p.y++ )
-	{
-		for( p.x = 0; p.x < _imgMat.cols; p.x++)
-		{
-			// add node
-			vtxIdx++;
-			_pGraph->add_node();
+	closedFormSolutionMatting closedFormedSln(&m_imgMat,&m_triMap,m_originalMask,m_pOriginalImage);
 
-			//int vtxIdx = graph.addVtx();
-			Vec3b color = _imgMat.at<Vec3b>(p);
+	closedFormedSln.Execute(originalMask);
 
-			// set t-weights
-			double fromSource, toSink;
-			if( _triMap.at<uchar>(p) == TM_PR_BGD || _triMap.at<uchar>(p) == TM_PR_FGD )
-			{
-				fromSource = -log( (*_pbGMM)(color) );
-				toSink = -log( (*_pfGMM)(color) );
-			}
-			else if( _triMap.at<uchar>(p) == TM_BGD )
-			{
-				fromSource = 0;
-				toSink = _lambda;
-			}
-			else // GC_FGD
-			{
-				fromSource = _lambda;
-				toSink = 0;
-			}
-			//graph.addTermWeights( vtxIdx, fromSource, toSink );
-			_pGraph->add_tweights(vtxIdx,fromSource,toSink);
-			// set n-weights
-			if( p.x>0 )
-			{
-				double w = _leftW.at<double>(p);
-				//graph.addEdges( vtxIdx, vtxIdx-1, w, w );
-				_pGraph->add_edge(vtxIdx,vtxIdx-1,w,w);
-			}
-			if( p.x>0 && p.y>0 )
-			{
-				double w = _upleftW.at<double>(p);
-				//graph.addEdges( vtxIdx, vtxIdx-img.cols-1, w, w );
-				_pGraph->add_edge(vtxIdx,vtxIdx-_imgMat.cols-1,w,w);
-			}
-			if( p.y>0 )
-			{
-				double w = _upW.at<double>(p);
-				//graph.addEdges( vtxIdx, vtxIdx-img.cols, w, w );
-				_pGraph->add_edge(vtxIdx,vtxIdx-_imgMat.cols,w,w);
-			}
-			if( p.x<_imgMat.cols-1 && p.y>0 )
-			{
-				double w = _uprightW.at<double>(p);
-				//graph.addEdges( vtxIdx, vtxIdx-img.cols+1, w, w );
-				_pGraph->add_edge(vtxIdx,vtxIdx-_imgMat.cols+1,w,w);
-			}
-		}
-	}
+
 }
-void MultiResolutionCut::estimateSegmentation()
+void MultiResolutionCut::ShowImgByMask(const Mat& img,Mat mask)
 {
-	_pGraph->maxflow();
-	Point p;
-	for( p.y = 0; p.y < _triMap.rows; p.y++ )
+	Mat binMask,res;
+	if (!mask.empty())
 	{
-		for( p.x = 0; p.x < _triMap.cols; p.x++ )
-		{
-			if( _triMap.at<uchar>(p) == TM_PR_BGD || _triMap.at<uchar>(p) == TM_PR_FGD )
-			{
-				//if( graph.inSourceSegment( p.y*mask.cols+p.x /*vertex index*/ ) )
-				if(_pGraph->what_segment(p.y*_triMap.cols+p.x /*vertex index*/ ) == GraphF::SOURCE)
-					_triMap.at<uchar>(p) = TM_PR_FGD;
-				else
-					_triMap.at<uchar>(p) = TM_PR_BGD;
-			}
-		}
+		_GraphCutUI::getBinaryMask(mask,binMask);
+		img.copyTo(res,binMask);
 	}
-}
-
-void MultiResolutionCut::cut()
-{
-	initialize();
-	buildGMMs();
-	for (int i=0;i<1;i++)
-	{
-		assignGMMsComponents();
-		learnGMMs();
-		constructGCGraph();
-		estimateSegmentation();
-		_pGraph->reset();
-	}
+	imshow("Segmentation By ClosedFormed",res);
 }

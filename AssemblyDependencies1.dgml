@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @17 Type=TrimapValue)" Category="CodeSchema_Enum" Bounds="-700.941666666667,89.4008842482501,109.343333333333,25.24" DelayedCrossGroupLinksState="Fetched" Label="TrimapValue" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;double,double,double&gt;::nodeptr&gt;)" Category="CodeSchema_Class" Bounds="362.036666666667,33.40088424825,350.723333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="DBlock‎&lt;Graph‎&lt;double‎,double‎,double‎&gt;‎::nodeptr‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;float,float,float&gt;::nodeptr&gt;)" Category="CodeSchema_Class" Bounds="-486.543333333333,33.4008842482501,307.883333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="DBlock‎&lt;Graph‎&lt;float‎,float‎,float‎&gt;‎::nodeptr‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;int,int,int&gt;::nodeptr&gt;)" Category="CodeSchema_Class" Bounds="-791.998333333333,33.4008842482501,274.793333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="DBlock‎&lt;Graph‎&lt;int‎,int‎,int‎&gt;‎::nodeptr‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;short,int,int&gt;::nodeptr&gt;)" Category="CodeSchema_Class" Bounds="7.71666666666647,33.40088424825,289.363333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="DBlock‎&lt;Graph‎&lt;short‎,int‎,int‎&gt;‎::nodeptr‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Category="CodeSchema_Class" Bounds="416.961666666667,-24.2866157517502,240.873333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="Graph‎&lt;double‎,double‎,double‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Category="CodeSchema_Class" Bounds="-353.618333333333,-24.2866157517501,198.033333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="Graph‎&lt;float‎,float‎,float‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;int,int,int&gt;)" Category="CodeSchema_Class" Bounds="-659.073333333333,-24.2866157517499,164.943333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="Graph‎&lt;int‎,int‎,int‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;short,int,int&gt;)" Category="CodeSchema_Class" Bounds="-62.3583333333335,-24.2866157517501,179.513333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="NotFetched" Group="Collapsed" Label="Graph‎&lt;short‎,int‎,int‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@10" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="F:\opencv\build\x64\vc11\bin\opencv_imgproc249d.dll" Group="Collapsed" Label="opencv_imgproc249d.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@12" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="F:\opencv\build\x64\vc11\bin\opencv_core249d.dll" Group="Collapsed" Label="opencv_core249d.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@14" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="F:\opencv\build\x64\vc11\bin\opencv_highgui249d.dll" Group="Collapsed" Label="opencv_highgui249d.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@16" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(VsSolution)\GraphCut.sln\未知库" Group="Collapsed" Label="未知库" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@18" Category="CodeSchema_Namespace" Bounds="-811.998333333333,-237.58911575175,1761.67333333333,372.23" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="29" Group="Expanded" Label="‎::" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True" />
+    <Node Id="@19" Category="CodeSchema_Method" Bounds="819.121666666667,-139.28161575175,110.553333333333,25.24" DelayedCrossGroupLinksState="Fetched" Label="getBinMask1" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@2" Category="CodeSchema_Assembly" Bounds="-831.998333333333,-277.82911575175,1801.67333333333,432.47" DelayedChildNodesState="Fetched" DelayedCrossGroupLinksState="Fetched" FetchedChildrenCount="1" FilePath="$(dfafae35-1e13-4837-b800-31a6f1b3a5de.OutputPath)" Group="Expanded" Label="GraphCut.exe" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" UseManualLocation="True">
+      <Category Ref="FileSystem.Category.FileOfType.exe" />
+    </Node>
+    <Node Id="@21" Category="CodeSchema_Method" Bounds="166.881666666667,-81.5941157517498,95.0333333333332,25.24" DelayedCrossGroupLinksState="Fetched" Label="on_mouse" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@22" Category="CodeSchema_Method" Bounds="-151.828333333333,-81.5941157517498,256.453333333333,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic atexit destructor for '_CutUI''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@23" Category="CodeSchema_Method" Bounds="292.491666666667,-81.5941157517501,213.813333333334,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic initializer for '_CutUI''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@24" Category="CodeSchema_Method" Bounds="-97.6716666666664,89.4008842482501,205.3,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic initializer for 'BLUE''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@25" Category="CodeSchema_Method" Bounds="137.628333333334,89.4008842482501,215.763333333333,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic initializer for 'GREEN''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@26" Category="CodeSchema_Method" Bounds="383.391666666667,89.4008842482501,240.066666666667,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic initializer for 'LIGHTBLUE''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@27" Category="CodeSchema_Method" Bounds="-331.971666666667,89.4008842482501,204.3,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic initializer for 'PINK''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@28" Category="CodeSchema_Method" Bounds="-561.598333333333,89.4008842482501,199.626666666667,25.24" DelayedCrossGroupLinksState="Fetched" Label="`dynamic initializer for 'RED''" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@29" Category="CodeSchema_Method" Bounds="-791.999684426666,89.4008842482501,61.0593688533331,25.24" DelayedCrossGroupLinksState="Fetched" Label="help" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@30" Category="CodeSchema_Method" Bounds="505.1679864,-196.96911575175,64.4606938666666,25.24" DelayedCrossGroupLinksState="Fetched" Label="main" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@31" Category="CodeSchema_Class" Bounds="674.361666666666,-139.66161575175,114.073333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="_GrabCut" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@32" Category="CodeSchema_Class" Bounds="147.423333333333,-24.2866157517501,133.95,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="_GraphCutUI" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@33" Category="CodeSchema_Class" Bounds="-147.981666666667,33.40088424825,124.76,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="Block‎&lt;int‎&gt;" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@34" Category="CodeSchema_Class" Bounds="659.676666666667,-197.34911575175,143.443333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="GCApplication" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@35" Category="CodeSchema_Class" Bounds="684.713333333333,-81.9741157517502,93.3699999999999,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="GMM" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@36" Category="CodeSchema_TypeDef" Bounds="568.731666666667,-81.9741157517502,85.3333333333335,26" DelayedCrossGroupLinksState="Fetched" Label="GraphD" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@37" Category="CodeSchema_TypeDef" Bounds="-295.885,-81.9741157517501,82.5666666666667,26" DelayedCrossGroupLinksState="Fetched" Label="GraphF" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@38" Category="CodeSchema_TypeDef" Bounds="-616.461666666667,-81.9741157517499,79.72,26" DelayedCrossGroupLinksState="Fetched" Label="GraphI" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@39" Category="CodeSchema_Class" Bounds="451.416666666666,-139.66161575175,171.963333333333,26" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Label="MultiResolutionCut" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@4" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedCrossGroupLinksState="Fetched" FilePath="$(System)\KERNEL32.dll" Label="KERNEL32.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@6" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(System)\MSVCP110D.dll" Group="Collapsed" Label="MSVCP110D.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="@8" Category="CodeSchema_Assembly" CodeSchemaProperty_IsExternal="True" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" FilePath="$(System)\MSVCR110D.dll" Group="Collapsed" Label="MSVCR110D.dll" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" />
+    <Node Id="_standardGraphExternalsGroup" Category="Externals" Bounds="36.8383333333333,184.64088424825,64,25.24" Group="Collapsed" Label="外部" />
+  </Nodes>
+  <Links>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;double,double,double&gt;::nodeptr&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Category="References" Bounds="508.148345947266,7.4786696434021,11.6725158691406,25.9222130775452" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3" />
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;float,float,float&gt;::nodeptr&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Category="References" Bounds="-332.601654052734,4.88136386871338,34.4210510253906,28.5195188522339" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3" />
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;int,int,int&gt;::nodeptr&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;int,int,int&gt;)" Category="References" Bounds="-654.601684570313,4.88136386871338,34.4210815429688,28.5195188522339" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3" />
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;short,int,int&gt;::nodeptr&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;short,int,int&gt;)" Category="References" Bounds="30.9298305511475,9.99158000946045,65.1304721832275,23.4093027114868" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3" />
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;double,double,double&gt;::nodeptr&gt;)" Category="References" Bounds="554.975769042969,1.71338427066803,11.6725463867188,25.9222148656845" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="10">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Target="@33" Category="References" Bounds="-16.6642169952393,-0.23113089799881,434.668092727661,33.0325644612312" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;float,float,float&gt;::nodeptr&gt;)" Category="References" Bounds="-289.022735595703,1.71338427066803,34.4210662841797,28.5195201635361" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="10">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Target="@33" Category="References" Bounds="-216.517166137695,1.71338427066803,84.3135375976563,28.7801002264023" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;int,int,int&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;int,int,int&gt;::nodeptr&gt;)" Category="References" Bounds="-611.022705078125,1.71338427066803,34.4210205078125,28.5195201635361" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="10">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;int,int,int&gt;)" Target="@33" Category="References" Bounds="-494.131164550781,-3.17835140228271,339.014419555664,36.4003438949585" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;short,int,int&gt;)" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;short,int,int&gt;::nodeptr&gt;)" Category="References" Bounds="62.5532646179199,1.71338427066803,60.9395408630371,27.0653690099716" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="10">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;short,int,int&gt;)" Target="@33" Category="References" Bounds="-52.1210098266602,1.71338427066803,54.0545544624329,27.5953277349472" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="3">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@18" Target="(@1 @17 Type=TrimapValue)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;double,double,double&gt;::nodeptr&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;float,float,float&gt;::nodeptr&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;int,int,int&gt;::nodeptr&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=DBlock&lt;Graph&lt;short,int,int&gt;::nodeptr&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;int,int,int&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;short,int,int&gt;)" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@19" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@21" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@22" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@23" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@24" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@25" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@26" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@27" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@28" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@29" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@30" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@31" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@32" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@33" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@34" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@35" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@36" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@37" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@38" Category="Contains" FetchingParent="@18" />
+    <Link Source="@18" Target="@39" Category="Contains" FetchingParent="@18" />
+    <Link Source="@19" Target="@12" Category="References" IsTargetVirtualized="True" Weight="13">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@19" Target="@16" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@2" Target="@18" Category="Contains" FetchingParent="@2" />
+    <Link Source="@2" Target="@4" Category="CodeSchema_Calls" />
+    <Link Source="@21" Target="@32" Category="CodeSchema_Calls" Bounds="214.398330688477,-56.3541145324707,0,23.067497253418" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@22" Target="@32" Category="CodeSchema_Calls" Bounds="28.4643783569336,-56.3541145324707,123.553428649902,29.9474277496338" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@23" Target="@32" Category="CodeSchema_Calls" Bounds="264.680450439453,-56.3541145324707,94.2463684082031,29.388313293457" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@24" Target="@12" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@25" Target="@12" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@26" Target="@12" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@27" Target="@12" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@28" Target="@12" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@29" Target="@12" Category="References" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@29" Target="@16" Category="References" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@29" Target="@6" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="4">
+      <Category Ref="References" />
+    </Link>
+    <Link Source="@30" Target="@12" Category="References" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@30" Target="@16" Category="References" IsTargetVirtualized="True" Weight="4">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@30" Target="@39" Category="CodeSchema_Calls" Bounds="537.398315429688,-171.729110717773,0,23.0674896240234" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@30" Target="@6" Category="CodeSchema_Calls" IsTargetVirtualized="True" Weight="4">
+      <Category Ref="References" />
+    </Link>
+    <Link Source="@31" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Category="References" Bounds="664.010559082031,-113.661613464355,145.387756347656,88.9486351013184" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="11">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@31" Target="@12" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="116">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@31" Target="@16" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="26">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@31" Target="@35" Category="References" Bounds="731.398315429688,-113.661613464355,0,22.6875" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="16">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@31" Target="@36" Category="References" Bounds="646.552001953125,-113.661613464355,57.8040771484375,27.7881088256836" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@31" Target="@8" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3" />
+    <Link Source="@32" Target="@12" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="63">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@32" Target="@14" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@32" Target="@16" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="30">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@32" Target="@8" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@33" Target="@8" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@34" Target="@12" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="44">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@34" Target="@14" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@34" Target="@16" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="26">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@34" Target="@19" Category="CodeSchema_Calls" Bounds="763.623657226563,-171.34912109375,71.1448364257813,28.7004699707031" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@34" Target="@31" Category="References" Bounds="731.398315429688,-171.34912109375,0,22.6875" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="4">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@34" Target="@8" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="2" />
+    <Link Source="@35" Target="@12" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="36">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@35" Target="@16" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="12">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@35" Target="@8" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="3" />
+    <Link Source="@36" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Category="References" Bounds="561.172424316406,-55.9741172790527,33.5498657226563,26.1541538238525" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@37" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Category="References" Bounds="-254.601669311523,-55.9741172790527,0,22.6875" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@38" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;int,int,int&gt;)" Category="References" Bounds="-576.601684570313,-55.9741172790527,0,22.6875" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@39" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;double,double,double&gt;)" Category="CodeSchema_Calls" Bounds="537.398315429688,-113.661613464355,0,80.3749961853027" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="8" />
+    <Link Source="@39" Target="(Assembly=&quot;file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe&quot; Namespace=:: Type=Graph&lt;float,float,float&gt;)" Category="References" Bounds="-213.843841552734,-123.217124938965,665.260498046875,95.4675827026367" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@39" Target="@10" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="1" />
+    <Link Source="@39" Target="@12" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="102">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@39" Target="@14" Category="CodeSchema_Calls" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="5" />
+    <Link Source="@39" Target="@16" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="31">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@39" Target="@21" Category="CodeSchema_Calls" Bounds="270.774810791016,-113.661613464355,193.834777832031,34.6187133789063" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="1" />
+    <Link Source="@39" Target="@32" Category="References" Bounds="135.398330688477,-120.492378234863,316.018325805664,93.0305061340332" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="6">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@39" Target="@35" Category="References" Bounds="581.116638183594,-113.661613464355,98.5899047851563,29.316520690918" IsSourceVirtualized="True" IsTargetVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="12">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="@39" Target="@36" Category="References" Bounds="554.074401855469,-113.661613464355,33.5498657226563,26.1541519165039" IsSourceVirtualized="True" Language="{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}" Weight="2" />
+    <Link Source="@39" Target="@8" Category="References" IsSourceVirtualized="True" IsTargetVirtualized="True" Weight="7">
+      <Category Ref="CodeSchema_Calls" />
+    </Link>
+    <Link Source="_standardGraphExternalsGroup" Target="@10" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@12" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@14" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@16" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@4" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@6" Category="Contains" />
+    <Link Source="_standardGraphExternalsGroup" Target="@8" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Assembly" Label="程序集" BasedOn="File" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Assembly" NavigationActionLabel="程序集" />
+    <Category Id="CodeSchema_Calls" Label="调用" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="调用者" OutgoingActionLabel="调用" />
+    <Category Id="CodeSchema_Class" Label="类" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="类" />
+    <Category Id="CodeSchema_Enum" Label="枚举" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Enum" NavigationActionLabel="枚举" />
+    <Category Id="CodeSchema_Member" Label="编号" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="CodeSchema_Field" NavigationActionLabel="成员" />
+    <Category Id="CodeSchema_Method" Label="方法" BasedOn="CodeSchema_Member" CanBeDataDriven="True" DefaultAction="Link:Forward:CodeSchema_Calls" Icon="CodeSchema_Method" NavigationActionLabel="方法" />
+    <Category Id="CodeSchema_Namespace" Label="命名空间" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Type" Icon="CodeSchema_Namespace" NavigationActionLabel="命名空间" />
+    <Category Id="CodeSchema_Type" Label="类型" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="类型" />
+    <Category Id="CodeSchema_TypeDef" Label="Typedef" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" IsProviderRoot="False" NavigationActionLabel="Typedef" />
+    <Category Id="Contains" Label="包含" Description="链接的源是否包含目标对象" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="包含者" IsContainment="True" OutgoingActionLabel="包含" />
+    <Category Id="Externals" Label="外部" CanBeDataDriven="True" IsProviderRoot="False" NavigationActionLabel="外部" />
+    <Category Id="File" Label="文件" CanBeDataDriven="True" DefaultAction="Microsoft.Contains" Icon="File" NavigationActionLabel="文件" />
+    <Category Id="FileSystem.Category.FileOfType.exe" BasedOn="CodeSchema_Assembly" CanBeDataDriven="True" IsProviderRoot="False" />
+    <Category Id="References" Label="引用" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="引用者" OutgoingActionLabel="引用" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsExternal" Label="是外部的" Description="一个标志，用于指示此节点是否被认为是外部的" DataType="System.Boolean" />
+    <Property Id="DataVirtualized" Label="已虚拟化数据" Description="如果为 true，则图中可以包含表示虚拟化节点/链接(即，不在图中实际创建)的数据的节点和链接。" DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="延迟的子节点状态" Description="如果未指定延迟的子节点状态，则为 Unspecified。如果尚未将组包含的子节点提取到关系图中，则为 NotFetched。如果已提取组内的所有延迟的子节点，则为 Fetched。" DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="延迟的跨组链接状态" Description="如果未指定延迟的跨组链接状态，则为 Unspecified。如果尚未将此节点上延迟的跨组链接提取到关系图中，则为 NotFetched。如果已提取所有延迟的跨组链接，则为 Fetched。" DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="FetchedChildrenCount" DataType="System.Int32" />
+    <Property Id="FetchingParent" DataType="Microsoft.VisualStudio.GraphModel.GraphNodeId" />
+    <Property Id="FilePath" Label="文件路径" Description="文件路径" DataType="System.String" />
+    <Property Id="Group" Label="组" Description="将节点显示为组" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsProviderRoot" Label="IsProviderRoot" Description="IsProviderRoot" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="已虚拟化链接源" Description="如果为 true，则链接源端包含虚拟化节点/链接(即，不在图中实际创建)的数据。" DataType="System.Boolean" />
+    <Property Id="IsTargetVirtualized" Label="已虚拟化链接目标" Description="如果为 true，则链接目标端包含虚拟化节点/链接(即，不在图中实际创建)的数据。" DataType="System.Boolean" />
+    <Property Id="Label" Label="标签" Description="可批注对象的可显示标签" DataType="System.String" />
+    <Property Id="Language" Label="语言" Description="语言" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Weight" Label="粗细" Description="粗细" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="程序集" ValueType="Uri" />
+    <Name Id="Member" Label="编号" ValueType="System.Object" />
+    <Name Id="Name" Label="名称" ValueType="System.String" />
+    <Name Id="Namespace" Label="命名空间" ValueType="System.String" />
+    <Name Id="OverloadingParameters" Label="参数" ValueType="Microsoft.VisualStudio.GraphModel.GraphNodeIdCollection" Formatter="NameValueNoEscape" />
+    <Name Id="Type" Label="类型" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(dfafae35-1e13-4837-b800-31a6f1b3a5de.OutputPathUri)" />
+    <Alias n="2" Id="(@1)" />
+    <Alias n="3" Uri="Assembly=$(SystemUri)/KERNEL32.dll" />
+    <Alias n="4" Id="(@3)" />
+    <Alias n="5" Uri="Assembly=$(SystemUri)/MSVCP110D.dll" />
+    <Alias n="6" Id="(@5)" />
+    <Alias n="7" Uri="Assembly=$(SystemUri)/MSVCR110D.dll" />
+    <Alias n="8" Id="(@7)" />
+    <Alias n="9" Uri="Assembly=file:///F:/opencv/build/x64/vc11/bin/opencv_imgproc249d.dll" />
+    <Alias n="10" Id="(@9)" />
+    <Alias n="11" Uri="Assembly=file:///F:/opencv/build/x64/vc11/bin/opencv_core249d.dll" />
+    <Alias n="12" Id="(@11)" />
+    <Alias n="13" Uri="Assembly=file:///F:/opencv/build/x64/vc11/bin/opencv_highgui249d.dll" />
+    <Alias n="14" Id="(@13)" />
+    <Alias n="15" Uri="Assembly=$(VsSolutionUri)/GraphCut.sln/未知库" />
+    <Alias n="16" Id="(@15)" />
+    <Alias n="17" Id="Namespace=::" />
+    <Alias n="18" Id="(@1 @17)" />
+    <Alias n="19" Id="(@1 @17 Member=(Name=getBinMask1 OverloadingParameters=[(Type=&quot;cv::Mat const &amp;&quot;),(Type=&quot;cv::Mat &amp;&quot;)]))" />
+    <Alias n="20" Id="(Type=int)" />
+    <Alias n="21" Id="(@1 @17 Member=(Name=on_mouse OverloadingParameters=[@20,@20,@20,@20,(Type=&quot;void *&quot;)]))" />
+    <Alias n="22" Id="(@1 @17 Member=&quot;`dynamic atexit destructor for '_CutUI''&quot;)" />
+    <Alias n="23" Id="(@1 @17 Member=&quot;`dynamic initializer for '_CutUI''&quot;)" />
+    <Alias n="24" Id="(@1 @17 Member=&quot;`dynamic initializer for 'BLUE''&quot;)" />
+    <Alias n="25" Id="(@1 @17 Member=&quot;`dynamic initializer for 'GREEN''&quot;)" />
+    <Alias n="26" Id="(@1 @17 Member=&quot;`dynamic initializer for 'LIGHTBLUE''&quot;)" />
+    <Alias n="27" Id="(@1 @17 Member=&quot;`dynamic initializer for 'PINK''&quot;)" />
+    <Alias n="28" Id="(@1 @17 Member=&quot;`dynamic initializer for 'RED''&quot;)" />
+    <Alias n="29" Id="(@1 @17 Member=help)" />
+    <Alias n="30" Id="(@1 @17 Member=main)" />
+    <Alias n="31" Id="(@1 @17 Type=_GrabCut)" />
+    <Alias n="32" Id="(@1 @17 Type=_GraphCutUI)" />
+    <Alias n="33" Id="(@1 @17 Type=Block&lt;int&gt;)" />
+    <Alias n="34" Id="(@1 @17 Type=GCApplication)" />
+    <Alias n="35" Id="(@1 @17 Type=GMM)" />
+    <Alias n="36" Id="(@1 @17 Type=GraphD)" />
+    <Alias n="37" Id="(@1 @17 Type=GraphF)" />
+    <Alias n="38" Id="(@1 @17 Type=GraphI)" />
+    <Alias n="39" Id="(@1 @17 Type=MultiResolutionCut)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="程序集" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="命名空间" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="接口" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="结构" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="枚举" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="委托" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="类" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="属性" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="方法" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Method')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="事件" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="字段" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="外部" ValueLabel="具有类别">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="dfafae35-1e13-4837-b800-31a6f1b3a5de.OutputPath" Value="H:\labCode\GraphCut\GraphCut\x64\Debug\GraphCut.exe" />
+    <Path Id="dfafae35-1e13-4837-b800-31a6f1b3a5de.OutputPathUri" Value="file:///H:/labCode/GraphCut/GraphCut/x64/Debug/GraphCut.exe" />
+    <Path Id="System" Value="C:\windows\system32" />
+    <Path Id="SystemUri" Value="file:///C:/windows/system32" />
+    <Path Id="VsSolution" Value="H:\labCode\GraphCut\GraphCut" />
+    <Path Id="VsSolutionUri" Value="file:///H:/labCode/GraphCut/GraphCut" />
+  </Paths>
+</DirectedGraph>

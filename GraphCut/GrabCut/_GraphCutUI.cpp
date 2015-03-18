@@ -178,3 +178,14 @@ void _GraphCutUI::getMask(Mat& _mask)
 	else
 		return;
 }
+void _GraphCutUI::getRect(Rect& _rect)
+{
+	if(rectState==SET)
+	{
+		_rect=rect;
+	}
+	else
+		return;
+}
+
+

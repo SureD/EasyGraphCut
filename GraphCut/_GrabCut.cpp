@@ -1,12 +1,5 @@
 #include "GrabCut/_GrabCut.h"
-_GrabCut::_GrabCut(void)
-{
 
-}
-_GrabCut::~_GrabCut(void)
-{
-
-}
 /*
   Calculate beta - parameter of GrabCut algorithm.
   beta = 1/(2*avg(sqr(||color[i] - color[j]||)))
@@ -300,7 +293,7 @@ void _GrabCut::estimateSegmentation(GraphD& graph,Mat& mask )
 }
 void _GrabCut::grab_Cut( Mat _img, Mat& _mask, Rect& rect,
 						Mat &_bgdModel, Mat& _fgdModel,
-						int iterCount, int mode  )
+						int iterCount, int mode=GC_INIT_WITH_MASK  )
 {
 	Mat& img = _img;
 	Mat& mask = _mask;
